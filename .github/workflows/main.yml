@@ -1,0 +1,31 @@
+name: .NET Build
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    defaults:
+      run:
+        working-directory: CyberSecurityAwarenessChatBot
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v2
+
+    - name: Setup NuGet
+      uses: NuGet/setup-nuget@v2
+
+    - name: Restore packages
+      run: nuget restore CyberSecurityAwarenessChatBot.csproj
+
+    - name: Build project
+      run: msbuild CyberSecurityAwarenessChatBot.csproj /p:Configuration=Release
