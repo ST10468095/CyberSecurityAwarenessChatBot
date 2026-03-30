@@ -48,12 +48,18 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ChatbotService.cs" />
     <Compile Include="Utils\AsciiArt.cs" />
+    <Compile Include="Utils\ConsoleHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="welcome.wav.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Media;
 
 
 namespace CyberSecurityAwarenessChatBot
@@ -14,6 +15,11 @@ namespace CyberSecurityAwarenessChatBot
     {
         static void Main(string[] args)
         {
+            PlayWelcomeSound();
+
+            Console.Title = "Cyber Security Awareness Chatbot";
+            Console.Clear();
+
             AsciiArt.ShowLogo();
             User user = new User();
 
@@ -50,6 +56,19 @@ namespace CyberSecurityAwarenessChatBot
                 Console.ResetColor();
             }
         }
+        static void PlayWelcomeSound()
+        {
+            try
+            {
+                SoundPlayer player = new SoundPlayer("welcome.wav");
+                player.PlaySync(); // plays sound before continuing
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error playing sound: " + ex.Message);
+            }
+        }
 
     }
+
 }
