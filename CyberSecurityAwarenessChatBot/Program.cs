@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CyberSecurityAwarenessChatBot.Utils;
 
 namespace CyberSecurityAwarenessChatBot
 {
@@ -10,6 +11,7 @@ namespace CyberSecurityAwarenessChatBot
     {
         static void Main(string[] args)
         {
+            AsciiArt.ShowLogo();
         }
     }
 }

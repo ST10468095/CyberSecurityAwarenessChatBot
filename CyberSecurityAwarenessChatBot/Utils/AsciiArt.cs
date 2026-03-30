@@ -6,7 +6,21 @@ using System.Threading.Tasks;
 
 namespace CyberSecurityAwarenessChatBot.Utils
 {
-    internal class AsciiArt
+    public static class AsciiArt
     {
+        public static void ShowLogo()
+        {
+            Console.ForegroundColor = ConsoleColor.Cyan;
+
+            Console.WriteLine(@"
+----------------------------------------
+      CYBER SECURITY AWARENESS CHATBOT
+----------------------------------------
+            Stay Safe Online 
+----------------------------------------
+");
+
+            Console.ResetColor();
+        }
     }
 }
