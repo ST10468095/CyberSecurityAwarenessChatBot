@@ -27,7 +27,7 @@ namespace CyberSecurityAwarenessChatBot
             user.Name = Console.ReadLine();
 
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine($"Welcome {user.Name}! I will be helping you stay safe today!");
+            Console.WriteLine($"Welcome {user.Name}! I will be helping you stay safe today! How may I assist  you?");
             Console.ResetColor();
 
             string input;
