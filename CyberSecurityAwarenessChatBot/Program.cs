@@ -61,7 +61,7 @@ namespace CyberSecurityAwarenessChatBot
             try
             {
                 SoundPlayer player = new SoundPlayer("welcome.wav");
-                player.PlaySync(); // plays sound before continuing
+                player.PlaySync(); 
             }
             catch (Exception ex)
             {
