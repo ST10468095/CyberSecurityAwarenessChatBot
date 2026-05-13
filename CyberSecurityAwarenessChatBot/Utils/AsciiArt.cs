@@ -10,6 +10,7 @@ namespace CyberSecurityAwarenessChatBot.Utils
     {
         public static void ShowLogo()
         {
+            //Ascii art cover design
             Console.ForegroundColor = ConsoleColor.Green;
 
             Console.WriteLine(@"

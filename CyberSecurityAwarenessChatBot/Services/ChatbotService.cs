@@ -11,6 +11,7 @@ namespace CyberSecurityAwarenessChatBot.Services
         public static string GetResponse(string input)
         {
             input = input.ToLower();
+            //prompts for user to put in in order for system to recognise wording and respond appropriately
 
             if (input.Contains("password"))
                 return "Use a strong password with uppercase letters, numbers, and symbols.";
@@ -72,6 +73,7 @@ namespace CyberSecurityAwarenessChatBot.Services
             if (input.Contains("thank"))
                 return "You're welcome! Staying safe online is important.";
 
+            //is the system does not recognize any prompt the user has typed, return: 
             return "I don't understand. Try asking about something else related to cybersecurity.";
         }
     }

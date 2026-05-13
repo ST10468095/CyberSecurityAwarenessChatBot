@@ -1,3 +1,4 @@
 <Solution>
   <Project Path="CyberSecurityAwarenessChatBot/CyberSecurityAwarenessChatBot.csproj" Id="8da35c04-ee49-4f8a-bb2d-4c77a03f3e3f" />
+  <Project Path="CyberSecurityAwarenessChatBot_GUI/CyberSecurityAwarenessChatBot_GUI.csproj" Id="9f66892d-98e9-4187-8ab6-a2aafa10922f" />
 </Solution>

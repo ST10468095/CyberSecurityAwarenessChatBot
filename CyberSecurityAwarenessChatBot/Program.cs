@@ -15,13 +15,16 @@ namespace CyberSecurityAwarenessChatBot
     {
         static void Main(string[] args)
         {
+            //welcome.wav sound plays for user
             PlayWelcomeSound();
-
+            //display the heading
             Console.Title = "Cyber Security Awareness Chatbot";
             Console.Clear();
 
             AsciiArt.ShowLogo();
             User user = new User();
+
+            //prompt user to enter their name 
 
             Console.Write("\nEnter your name: ");
             user.Name = Console.ReadLine();
@@ -39,7 +42,7 @@ namespace CyberSecurityAwarenessChatBot
                 Console.ResetColor();
 
                 input = Console.ReadLine();
-
+                //if user types nothing and presses enter
                 if (string.IsNullOrWhiteSpace(input))
                 {
                     Console.WriteLine("Please type something.");
@@ -60,6 +63,7 @@ namespace CyberSecurityAwarenessChatBot
         {
             try
             {
+                //welcome.wav plays
                 SoundPlayer player = new SoundPlayer("welcome.wav");
                 player.PlaySync(); 
             }
