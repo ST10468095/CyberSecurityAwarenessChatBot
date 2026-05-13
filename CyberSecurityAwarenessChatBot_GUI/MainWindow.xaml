@@ -1,12 +1,88 @@
 ﻿<Window x:Class="CyberSecurityAwarenessChatBot_GUI.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:CyberSecurityAwarenessChatBot_GUI"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Cybersecurity Awareness Chatbot" 
+        Height="600" Width="700"
+        WindowStartupLocation="CenterScreen"
+        Background="#1A1A2E">
+
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
         
+        <Border Grid.Row="0" Background="#16213E" Padding="10">
+            <StackPanel>
+                <TextBlock x:Name="AsciiArtBlock" 
+                           FontFamily="Consolas" 
+                           FontSize="9" 
+                           Foreground="#6C63FF"
+                           TextWrapping="Wrap"
+                           Text="Loading..." 
+                           TextAlignment="Center"/>
+                <TextBlock Text="CYBER SECURITY AWARENESS CHATBOT" 
+                           FontSize="16" 
+                           FontWeight="Bold" 
+                           Foreground="#E94560"
+                           HorizontalAlignment="Center"
+                           Margin="0,5,0,0"/>
+            </StackPanel>
+        </Border>
+
+        
+        <ListBox x:Name="ChatListBox" 
+                 Grid.Row="1" 
+                 Background="#1A1A2E"
+                 BorderThickness="0"
+                 Margin="10"
+                 ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Border CornerRadius="10" 
+                            Margin="5" 
+                            Padding="10"
+                            Background="{Binding IsUser, Converter={StaticResource UserMessageColorConverter}}">
+                        <TextBlock Text="{Binding Message}" 
+                                   Foreground="White" 
+                                   TextWrapping="Wrap"
+                                   FontSize="13"/>
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        
+        <Border Grid.Row="2" Background="#16213E" Padding="10">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBox x:Name="UserInputTextBox" 
+                         Grid.Column="0"
+                         Background="#0F3460"
+                         Foreground="White"
+                         BorderThickness="0"
+                         Padding="10"
+                         FontSize="13"
+                         KeyDown="UserInputTextBox_KeyDown"/>
+
+                <Button x:Name="SendButton" 
+                        Grid.Column="1"
+                        Content="SEND"
+                        Background="#E94560"
+                        Foreground="White"
+                        FontWeight="Bold"
+                        Padding="15,10"
+                        Margin="10,0,0,0"
+                        BorderThickness="0"
+                        Cursor="Hand"
+                        Click="SendButton_Click"/>
+            </Grid>
+        </Border>
     </Grid>
 </Window>

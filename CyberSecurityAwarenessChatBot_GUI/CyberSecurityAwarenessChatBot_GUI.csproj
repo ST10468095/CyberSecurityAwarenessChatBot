@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ChatMessage.cs.cs" />
     <Compile Include="Services\ChatbotService.cs" />
     <Compile Include="Utils\AsciiArt.cs" />
     <Page Include="MainWindow.xaml">
