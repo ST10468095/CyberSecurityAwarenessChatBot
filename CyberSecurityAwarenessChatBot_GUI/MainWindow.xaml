@@ -13,7 +13,7 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        
+        <!-- Header with ASCII Art -->
         <Border Grid.Row="0" Background="#16213E" Padding="10">
             <StackPanel>
                 <TextBlock x:Name="AsciiArtBlock" 
@@ -32,7 +32,7 @@
             </StackPanel>
         </Border>
 
-        
+        <!-- Chat Display Area -->
         <ListBox x:Name="ChatListBox" 
                  Grid.Row="1" 
                  Background="#1A1A2E"
@@ -44,7 +44,7 @@
                     <Border CornerRadius="10" 
                             Margin="5" 
                             Padding="10"
-                            Background="{Binding IsUser, Converter={StaticResource UserMessageColorConverter}}">
+                            Background="#16213E">
                         <TextBlock Text="{Binding Message}" 
                                    Foreground="White" 
                                    TextWrapping="Wrap"
@@ -54,7 +54,7 @@
             </ListBox.ItemTemplate>
         </ListBox>
 
-        
+        <!-- Input Area -->
         <Border Grid.Row="2" Background="#16213E" Padding="10">
             <Grid>
                 <Grid.ColumnDefinitions>
