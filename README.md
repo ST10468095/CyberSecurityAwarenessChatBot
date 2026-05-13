@@ -12,6 +12,8 @@ System Setup: 1: Install Visual Studio
               6: Build the solution by pressing Build and tthen build solution 
               7: Run the program by pressing Ctrl + F5
 
+Link to Youtube video: https://youtu.be/cfSU9GPmNZk            
+
 Usage instructions/prompts to put into the chat bot;
 password, phishing, browsing, purpose, how are you, virus, antivirus, vpn, wifi, scam, email safety, update, two-factor, identity theft, safe download, backup, ransomware, firewall, hello,
 thank.
